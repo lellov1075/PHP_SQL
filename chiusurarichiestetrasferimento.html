@@ -1,0 +1,44 @@
+<html>
+<header><b>CHIUSURA RICHIESTE DI TRASFERIMENTO</b></header>
+<br>
+<body>
+
+<form name="form" method="post" action="esauriti.php" enctype="multipart/form-data" action="http://localhost:3000/upload?upload_progress_id=12344">
+<br>
+<P><font color=red> <b>LOGIN CREDENZIALI SAP</b></font></P>
+<label for="user"><b>Utente:</b></label></td>
+  <input type="text" name="user"><br><br>
+  <label for="pass"><b>Password:</b></label></td>
+  <input type="password" name="pass"><br>
+  <P>________________________</P>
+
+<p><font color="red" size="3"> <b>Seleziona il file .csv da importare:</b></font></p>
+  <input type="hidden" name="MAX_FILE_SIZE" value="300000">
+  Invia questo file: <input name="userfile" type="file" ></br></br>
+<legend><b>Seleziona il Database:</b></legend>
+<select name="Database" >
+<option value="U_GAUTO" selected="selected">U_GAUTO</option>
+<option value="U_GPARTS">U_GPARTS</option>
+<option value="U_GLOBAL">U_GLOBAL</option>
+</select>
+<br>
+<legend><b>Seleziona il Magazzino di partenza:</b></legend>
+<select name="Filler" >
+<option value="Mc" selected="selected">CASALNUOVO</option>
+<option value="Mf-vl">VOLLA</option>
+</select>
+<br>
+<legend><b>Seleziona il Magazzino di destinazione:</b></legend>
+<select name="towhs" >
+<option value="Mf-ct" selected="selected">CATANIA</option>
+<option value="Mf-rm">ROMA</option>
+<option value="Mf-vl">VOLLA</option>
+</select>
+<br><br>
+    <input type="submit" formaction="chiusurarichiestetrasferimento.php" value="Esegui Massivo" name="subb">
+</form>
+
+
+
+</body>
+</html>
